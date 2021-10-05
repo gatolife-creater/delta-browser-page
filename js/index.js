@@ -107,7 +107,7 @@ stopBtn.onclick = () => {
     recognition.stop();
 }
 
-input.addEventListener('input', check_words);
+// input.addEventListener('input', check_words);
 
 function check_words() {
     let word = document.getElementById("search-input").value;
