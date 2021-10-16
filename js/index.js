@@ -32,15 +32,17 @@ $(window).on('load', function() {
 
 
 const search = () => {
-    let word = document.getElementById("search-input").value;
+  let word = document.getElementById("search-input").value;
+  if (word !== "") {
     if (word.includes("で検索")) {
-        word = word.replace("で検索", "");
+      word = word.replace("で検索", "");
     }
     if (isURL(word)) {
-        location.href = `http://${word}`;
+      location.href = `http://${word}`;
     } else {
-        location.href = `https://www.google.com/search?q=${word}`;
+      location.href = `https://www.google.com/search?q=${word}`;
     }
+  }
 }
 
 function searchToggle(obj, evt) {
